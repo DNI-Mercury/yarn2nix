@@ -1,5 +1,5 @@
 import (builtins.fetchTarball {
   # nixpkgs unstable 2018-05-31
-  url = "https://github.com/NixOS/nixpkgs/archive/5b468ea6b1d8d243847a05bdf5603e8abdfd7b4e.tar.gz";
-  sha256 = "0yj31a11h0mj9d5jyz95ynh5791nd0y1xzqk7ba3qrikljqg3lvb";
+  url = "https://github.com/NixOS/nixpkgs/archive/46d3867a08a9206685e2b6a8e19f5ad9f6ab4b39.tar.gz";
+  sha256 = "16nryjvfaw2dq55yp34hcw5bz8nlidhdi3yvr2ilr7lrlm4k54p1";
 })
