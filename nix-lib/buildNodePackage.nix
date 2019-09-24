@@ -3,6 +3,7 @@
 , version # String
 , src # Drv
 , nodeBuildInputs # Listof { key: { scope: String, name: String }, drv : Drv }
+, buildInputs ? [nodejs]
 , ... }@args:
 
 # since we skip the build phase, pre and post will not work
@@ -22,9 +23,8 @@ let
 
 in stdenv.mkDerivation ((removeAttrs args [ "key" "nodeBuildInputs" ]) // {
   name = packageName;
-  inherit version src;
+  inherit version src buildInputs;
 
-  buildInputs = [ nodejs ];
 
   configurePhase = args.configurePhase or "true";
   # skip the build phase except when given as attribute
